@@ -14,7 +14,7 @@ class RoutineController extends GetxController {
     isLoading.value = true;
     
     final data = await deepseekService.generarRutina(
-      'Intermedio', // Puedes hacer que el usuario elija esto
+      'Intermedio', 
       selectedGoal.value,
     );
 

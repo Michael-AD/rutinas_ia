@@ -5,7 +5,7 @@ import 'dart:convert';
 
 class DeepseekService {
   final String apiUrl = 'https://openrouter.ai/api/v1/chat/completions';
-  final String apiKey = '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'; // <-- ¡Pon tu API Key aquí!
+  final String apiKey = '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';
 
   Future<Map<String, dynamic>?> generarRutina(String nivel, String objetivo) async {
     try {
@@ -13,12 +13,12 @@ class DeepseekService {
         Uri.parse(apiUrl),
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer $apiKey', // <-- Autorización con API Key
-          'HTTP-Referer': 'tu-pagina.com', // Requerido por OpenRouter
+          'Authorization': 'Bearer $apiKey', 
+          'HTTP-Referer': 'tu-pagina.com', 
           'X-Title': 'Creador de Rutinas'
         },
         body: jsonEncode({
-          "model": "deepseek/deepseek-r1:free", // Especificamos el modelo
+          "model": "deepseek/deepseek-r1:free", 
           "messages": [
             {
               "role": "system",
